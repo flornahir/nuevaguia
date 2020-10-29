@@ -1,0 +1,955 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FCF9D6;
+}
+
+.aa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+p,
+a,
+li,
+strong,
+h3,
+h4,
+span,
+th,
+td {
+  color: #653B17;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.05em;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#huertaEnCasa,
+#planificacion,
+#herramientas,
+#suelo,
+#siambra {
+  margin: 0 0 40px;
+  position: relative;
+}
+
+.contenedorTexto {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.contenedorTexto p {
+  padding: 10px 0;
+}
+
+.contenedorTexto h2 {
+  color: #9DC13E;
+  padding: 30px 0 15px;
+}
+
+.contenedorTexto h3 {
+  font-size: 1.3em;
+  color: #9DC13E;
+  padding: 15px 0 10px;
+}
+
+.contenedorTexto li {
+  padding: 10px 0;
+}
+
+.contenedorTexto .textoImg {
+  position: relative;
+  margin: 10px 0;
+}
+
+.contenedorTexto .textoImg:after {
+  content: ' ';
+  width: 97%;
+  height: 90%;
+  position: absolute;
+  top: calc(5% - 2px);
+  left: calc(1.5% - 2px);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #FCF9D6;
+}
+
+.fondoVerde {
+  background-color: rgba(157, 193, 62, 0.7);
+  padding: 10px;
+}
+
+.fondoVerde h2,
+.fondoVerde h3,
+.fondoVerde h4 {
+  color: #653B17;
+}
+
+.fondoRojo {
+  background-color: rgba(255, 99, 71, 0.7);
+  padding: 10px;
+}
+
+.fondoRojo h2,
+.fondoRojo h3,
+.fondoRojo h4 {
+  color: #653B17;
+}
+
+.fondoNaranja {
+  background-color: #F7B22E;
+  padding: 10px;
+}
+
+.fondoNaranja h2,
+.fondoNaranja h3,
+.fondoNaranja h4 {
+  color: #653B17;
+}
+
+.subtitulo h2 {
+  width: 90%;
+  margin: 25px auto 15px;
+  text-align: center;
+  font-size: 2em;
+  color: #9DC13E;
+  text-decoration: underline;
+}
+
+.fila {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fila .columna {
+  width: 100%;
+}
+
+.infoImg {
+  padding: 10px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.infoImg img {
+  width: 100%;
+}
+
+.contenedorItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contenedorItems .items {
+  width: 28%;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contenedorItems .items p {
+  text-align: center;
+}
+
+.tip {
+  width: 100%;
+  margin: 25px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tip .tipTexto {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.tip .tipTexto p {
+  text-align: center;
+}
+
+.tip .tipIcono {
+  width: 15%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tip .tipIcono i {
+  font-size: 1.5em;
+  color: #653B17;
+}
+
+.btnArriba {
+  position: relative;
+}
+
+.btnArriba a {
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  border-radius: 100%;
+  bottom: 8px;
+  right: 10px;
+  border: 3px solid #9DC13E;
+  background-color: #FCF9D6;
+  z-index: 9;
+  cursor: pointer;
+  display: none;
+  -webkit-box-shadow: 0 10px 20px rgba(101, 59, 23, 0.19), 0 6px 6px rgba(101, 59, 23, 0.23);
+          box-shadow: 0 10px 20px rgba(101, 59, 23, 0.19), 0 6px 6px rgba(101, 59, 23, 0.23);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.btnArriba a img {
+  width: 1.5em;
+}
+
+@-webkit-keyframes btnArribaIn {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes btnArribaIn {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes btnArribaOut {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes btnArribaOut {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+.contenedorTabla {
+  margin: 0 0 20px;
+}
+
+.contenedorTabla .tabla {
+  width: 100%;
+  margin: 5px auto 10px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.contenedorTabla .tabla thead tr {
+  border: 1px solid #9DC13E;
+}
+
+.contenedorTabla .tabla thead tr th {
+  background-color: #F7B22E;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.contenedorTabla .tabla tbody tr td {
+  border: 1px solid #9DC13E;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.contenedorTabla .tabla tbody .par {
+  background-color: rgba(157, 193, 62, 0.7);
+}
+
+.contenedorTabla .tabla tbody .impar {
+  background-color: transparent;
+}
+
+.contenedorAcordion {
+  margin: 20px auto;
+}
+
+.contenedorAcordion input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.contenedorAcordion .tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contenedorAcordion .tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.contenedorAcordion .tab-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  background: #F7B22E;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.contenedorAcordion .tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  color: #653B17;
+}
+
+.contenedorAcordion .tab-label .verdura {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedorAcordion .tab-label .verdura h3 {
+  color: #653B17;
+}
+
+.contenedorAcordion .tab-label .verdura img {
+  max-width: 60px;
+  margin: 0 20px;
+  display: inline-block;
+}
+
+.contenedorAcordion .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  background: rgba(157, 193, 62, 0.7);
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.contenedorAcordion .tab-content .meses .mes {
+  background-color: #F7B22E;
+  display: inline-block;
+  margin: 0 10px 10px;
+}
+
+.contenedorAcordion .tab-content .meses .mes p {
+  text-align: center;
+  padding: 10px;
+}
+
+.contenedorAcordion .tab-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #F7B22E;
+  cursor: pointer;
+}
+
+.contenedorAcordion input:checked + .tab-label::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contenedorAcordion input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+/*--------------------Index---------------------*/
+#cabecera {
+  background-color: rgba(157, 193, 62, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 25px;
+}
+
+#cabecera #logo {
+  width: 80px;
+}
+
+#cabecera #logo a {
+  display: block;
+}
+
+#cabecera #menu {
+  width: 40px;
+}
+
+#titulo {
+  width: 90%;
+  margin: 20px auto 25px;
+}
+
+#titulo h1 {
+  font-size: 2.3em;
+  color: #9DC13E;
+  text-align: center;
+}
+
+#seccionesGuia {
+  width: 95%;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#seccionesGuia .seccion {
+  width: 42%;
+  height: 400px;
+  background-color: rgba(157, 193, 62, 0.1);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 10px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#seccionesGuia .seccion .titulo {
+  margin: 0 0 12px;
+}
+
+#seccionesGuia .seccion .titulo h2 {
+  font-size: 1.3em;
+  color: #9DC13E;
+}
+
+#seccionesGuia .seccion .btn {
+  width: 60%;
+  background-color: #F7B22E;
+  padding: 5px;
+}
+
+#seccionesGuia .seccion .btn a {
+  width: 100%;
+  display: block;
+  color: #FCF9D6;
+  text-align: center;
+}
+
+/*--------------------HuertaenCasa---------------------*/
+#huertaEnCasa .huertaBeneficios {
+  position: relative;
+}
+
+#huertaEnCasa .huertaBeneficios ul {
+  background-color: rgba(157, 193, 62, 0.7);
+  list-style: none;
+  padding: 30px;
+  margin-top: 15px;
+}
+
+#huertaEnCasa .huertaBeneficios ul:after {
+  content: ' ';
+  width: 97%;
+  height: 90%;
+  position: absolute;
+  top: calc(5% - 2px);
+  left: calc(1.5% - 2px);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #FCF9D6;
+}
+
+#huertaEnCasa .huertaBeneficios ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/*--------------------Planificacion---------------------*/
+/*--------------------Herramientas---------------------*/
+#herramientas .herramientas {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#herramientas .herramientas p {
+  width: 70%;
+}
+
+#herramientas .herramientas img {
+  width: 30%;
+  margin: 5px;
+}
+
+#herramientas .herramientas:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#herramientas .herramientas:nth-child(odd) p {
+  margin: 0 10px;
+}
+
+/*--------------------Suelo---------------------*/
+#suelo ul {
+  margin: 15px 10px 0 10px;
+}
+
+#suelo ul li {
+  margin: 5px auto;
+  counter-increment: li;
+}
+
+#suelo ul li::before {
+  content: counter(li) ".";
+  color: #9DC13E;
+  margin-right: 3px;
+  font-weight: bold;
+}
+
+#suelo .sueloIdeal .fila .columna div {
+  margin: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#suelo .sueloIdeal .fila .columna div .color {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+}
+
+#suelo .sueloIdeal .fila .columna div .color.uno {
+  background-color: #9DC13E;
+}
+
+#suelo .sueloIdeal .fila .columna div .color.dos {
+  background-color: #5C7508;
+}
+
+#suelo .sueloIdeal .fila .columna div .color.tres {
+  background-color: #3A4A04;
+}
+
+#suelo .sueloIdeal .fila img {
+  width: 50%;
+  margin: 10px auto;
+}
+
+#suelo .compostAntesYDespues {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#suelo .compostAntesYDespues .columna {
+  width: calc(100% - 10px);
+  margin: 10px;
+}
+
+#suelo .compostAntesYDespues .columna .textoImg {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#suelo .compostAntesYDespues .columna .textoImg img {
+  width: 100%;
+}
+
+#suelo span {
+  color: tomato;
+}
+
+#suelo h4 {
+  text-align: center;
+}
+
+/*--------------------Siembra---------------------*/
+#siembra span p {
+  color: #F7B22E;
+}
+
+#siembra .naranja {
+  color: #F7B22E;
+}
+
+/*--------------------Cuidados---------------------*/
+#cuidados span p {
+  color: #F7B22E;
+}
+
+#cuidados .naranja {
+  color: #F7B22E;
+}
+
+#cuidados .remedio {
+  margin: 20px auto;
+}
+
+#cuidados .remedio h4 {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+#cuidados .remedio ul {
+  list-style: circle;
+  margin: 0 0 0 15px;
+}
+
+#cuidados .remedio ol,
+#cuidados .remedio ul {
+  margin: 0 0 0 15px;
+}
+
+#cuidados .remedio ol p,
+#cuidados .remedio ul p {
+  margin: 0 0 0 -15px;
+  padding: 5px 0;
+  font-size: .9em;
+}
+
+#cuidados .remedio li {
+  padding: 5px 0;
+}
+
+/*--------------------Ficha Tecnica---------------------*/
+/*-----------------------------------------------------------------------
+                                 MediaQuery
+------------------------------------------------------------------------*/
+@media only screen and (min-width: 992px) {
+  #titulo {
+    width: 70%;
+    margin: 20px auto 25px;
+  }
+  #titulo h1 {
+    font-size: 2.3em;
+    color: #9DC13E;
+    text-align: center;
+  }
+  #seccionesGuia {
+    width: 95%;
+    margin: 20px auto;
+  }
+  #seccionesGuia .seccion {
+    width: 30%;
+    height: 300px;
+  }
+  #seccionesGuia .seccion .titulo {
+    margin: 0 0 20px;
+  }
+  #seccionesGuia .seccion .titulo h2 {
+    font-size: 1.5em;
+  }
+  #seccionesGuia .seccion .btn {
+    width: 60%;
+  }
+  .contenedorTexto {
+    width: 75%;
+    margin: 40px auto;
+  }
+  .contenedorTexto p {
+    padding: 15px 0;
+  }
+  .contenedorTexto .textoImg {
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+  }
+  .fondoVerde,
+  .fondoNaranja,
+  .fondoRojo {
+    padding: 15px;
+  }
+  .fila {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .fila .columna {
+    width: calc(50% - 10px);
+    margin: 10px;
+  }
+  .fila .infoImg {
+    padding: 10px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .fila .infoImg p {
+    padding: 20px;
+  }
+  .fila .infoImg img {
+    width: 100%;
+  }
+  .fila .textoImg {
+    width: 100%;
+  }
+  .infoImg {
+    padding: 10px;
+    margin: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .infoImg p {
+    padding: 20px;
+  }
+  .infoImg img {
+    width: 40%;
+  }
+  .contenedorAcordion .verdura {
+    width: 35% !important;
+  }
+  /*--------------------Herramientas---------------------*/
+  #herramientas .herramientas p {
+    width: 80%;
+  }
+  #herramientas .herramientas img {
+    width: 20%;
+  }
+  /*--------------------Suelo---------------------*/
+  #suelo .sueloIdeal img {
+    width: 60%;
+    margin: 10px auto;
+  }
+  #suelo .sueloIdeal .columna {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /*--------------------Cuidados---------------------*/
+  #cuidados .remedio {
+    width: 70%;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .contenedorTexto {
+    width: 992px;
+  }
+  .subtitulo {
+    height: 30vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */
